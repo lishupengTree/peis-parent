@@ -1,0 +1,7 @@
+.box1{ width:570px; border:1px solid #b6cfd6; padding:1px; margin:0 auto;background-color: #fff} 
+.box2{ width:554px; background:none; background-color:#d9eaee; padding:8px;}
+.box3{ width:554px; margin:0 auto; padding-bottom:5px;}
+.box3 span{ font-size:13px; color:#6ba3b6; font-family:font-family:Microsoft YaHei; font-weight:bold;}
+.boxpad{float: right;}
+.boxpad img:hover{cursor: pointer;}
+.box4{ width:542px; border:1px solid #b6cfd6; background-color:#fff; padding:5px;font-size:13px;font-family:font-family:Microsoft YaHei; line-height:22px;}

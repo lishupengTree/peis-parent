@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rows>
+	#foreach($role in $roleList)
+	<row id="$role.get("id")">
+		<cell type="ch"></cell>
+		
+		<cell >$!role.get("code")</cell>
+		
+		<cell >$!role.get("lvl")</cell>
+		
+ 		<cell >$!role.get("name")</cell> 	
+ 		
+ 		<cell >$!role.get("index_no")</cell> 
+ 		
+ 		<cell >$!role.get("remark")</cell> 
+	</row>
+	#end
+</rows>

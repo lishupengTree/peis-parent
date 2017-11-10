@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rows>
+	#set($num = 0)
+	#foreach($show in $showList)
+	#set($num = $num +1)
+	<row id="$num">
+		<cell type="ch"></cell>
+		
+		<cell >$!show.get("result")</cell>
+		
+		<cell >$!show.get("unnormal")</cell>
+		
+	</row>
+	#end
+</rows>

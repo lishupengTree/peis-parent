@@ -1,0 +1,213 @@
+@charset "utf-8";
+
+/*--global--*/
+body,html{ text-align:center; padding:0px; margin:0px auto; overflow:hidden;}
+ul,form{margin:0px;padding:0px;}
+ul{ list-style:none;}
+div,td{ font-size:16px; font-family:"Microsoft Yahei"; letter-spacing:1px; color:#4f5050;}
+img {border:none;}
+.clearleft{clear:left;}
+.cleardiv{ clear:both;}
+
+/*--link--*/
+a{ text-decoration:none;}
+A:link { text-decoration:underline; color:#000;}
+A:hover{ text-decoration:underline; color:#000;}
+A:visited{ text-decoration:none; color:#000;}
+A:active{ text-decoration:none; color:#000;}
+
+
+#Warp{ width:1024px; margin:0px auto; text-align:center; padding:0px;}
+.HeadBar1{ background:url(../../img/bankMedicalPass/index_01.jpg) left top no-repeat; height:131px; width:1024px; float:left; padding:0px; margin:0px;}
+.HeadBar{ background:url(../../img/bankMedicalPass/top_01.jpg) left top no-repeat; height:131px; width:1024px; float:left; padding:0px; margin:0px;}
+.TimeCss{ color:#eaf5ff; float:left; padding:40px 0px 0px 0px; text-indent:20px; font-size:16px; text-align:left; width:100%;}
+.TimeCss1{ color:#eaf5ff; float:left; padding:40px 0px 0px 0px; text-indent:20px; font-size:16px; text-align:left; width:100%;}
+.LeftFont{ float:left; padding:0px; margin:0px; text-indent:20px; display:inline-block; padding:7px 10px 0px 0px;}
+.RedFont{ color:#F00; font-size:22px; display:inline-block; width:50px; text-align:center; text-indent:0px; padding:0px;}
+.ContentBar{  background:url(../../img/bankMedicalPass/content.jpg) left top no-repeat; height:578px; width:1024px; float:left; padding:0px; margin:0px;}
+.LeftBar{ background:url(../../img/bankMedicalPass/pic.jpg) left top no-repeat; height:578px; width:625px; float:left; padding:0px; margin:0px;}
+.RightBar{ background:url(../../img/bankMedicalPass/right.jpg) left top no-repeat; height:578px; width:398px; float:left; padding:0px; margin:0px;}
+.IndexbtnCss,.IndexbtnCss ul{ width:100%; padding:0px; margin:0px; float:left;}
+.IndexbtnCss ul li{ padding:43px 0px 0px 0px; float:left;}
+
+.positionCss{ color:#057f05; text-align:left; float:left; height:50px; line-height:50px; text-indent:20px; width:100%; padding:0px; margin:0px;}
+.CenterBar{ width:100%; padding:0px; margin:0px auto; text-align:center; height:448px; float:left;}
+.bordermessage{ width:984px; margin:0px auto; text-align:center; height:448px;}
+.bordermessage ul{ width:246px; height:100px; background:url(../../img/bankMedicalPass/border.png) left center no-repeat; float:left; padding:28px 0px 10px 0px; margin:5px 0px;}
+.bordermessage ul:hover{ background:url(../../img/bankMedicalPass/borderOn.png) left center no-repeat; cursor:pointer;}
+.bordermessage ul li{ text-align:center; padding:4px;}
+.font18px{ font-size:18px; font-weight:bold; padding:0px;}
+.commBord{ width:980px; margin:100px auto; text-align:center;}
+.commBord ul li{ float:left; padding:6px 0px;}
+
+.cashand{ width:980px; margin:0px auto; text-align:center;}
+.cashand ul{ margin:0px auto; text-align:center; width:800px;}
+.cashand ul li{ float:left; padding:6px 30px;}
+
+.titleCss{ text-align:center; font-size:24px; color:#caeaf9; font-family:"经典平黑简"; height:40px; line-height:40px; font-weight:normal;}
+.titleCss font{ text-align:center; font-size:17px; color:#caeaf9; font-family:"经典平黑简"; height:40px; line-height:40px; font-weight:normal;}
+
+.cashand1{ width:980px; margin:0px auto; text-align:center;}
+.cashand1 ul{ margin:0px auto; text-align:center; width:960px;}
+.cashand1 ul li{ float:left; padding:6px 5px;}
+
+.commImg{ margin:8px auto; text-align:center;}
+.commImg ul li{ padding:10px 0px 25px 0px;}
+
+.kuanCss{  width:980px; margin:8px auto; text-align:center;  /*background:url(../img/kuan.png) center top no-repeat;*/ height:413px;}
+.kuanCss .tableborder{ padding:0px; margin:0px auto;}
+.lineCss{background:url(../../img/bankMedicalPass/line1.gif) right top repeat-y; padding:0px; margin:0px;}
+
+.tableComm{ width:980px; margin:0px auto; text-align:center;}
+.tbtable{ border-collapse:collapse;}
+.tbtable td{ padding:10px 0px; text-align:left;}
+.tableborder td.font24px{ border-bottom:1px dashed #c6c3ba; background:url(../../img/bankMedicalPass/line.jpg) left bottom repeat-x; font-size:24px; height:45px; line-height:45px; padding-top:30px; color:#464e57;}
+.tableborder td.btnCss{ text-align:right;}
+.orgfont{ color:#ee4910; font-size:18px; text-align:left; height:50px; line-height:50px;}
+.orgfont28{ color:#ee4910; font-size:28px; text-align:left; padding:30px 0px 55px 0px;}
+.tableList{ border-collapse:collapse;}
+.tableList th{ background:url(../../img/bankMedicalPass/th.gif) left center repeat-x; border:1px solid #b2b9c4; height:45px; line-height:45px; font-size:16px; padding:0px 3px; color:#fff;}
+.tableList td{ border:1px solid #b2b9c4; height:38px; line-height:38px; font-size:14px; padding:0px 3px;}
+.tableList th.leftTd,.tableList td.leftTd{ text-align:left;}
+.tableList th.tdStart,.tableList td.tdStart{ border-left:none;}
+.tableList th.tdEnd,.tableList td.tdEnd{ border-right:none;}
+.LeftCss{ float:left; padding:15px 0px; margin:0px; width:100%; text-align:left;}
+.pagesize{ width:956px; margin:0px auto; text-align:left;}
+.pagesize ul{ width:100%; float:left; padding:0px; margin:0px;}
+.pagesize ul li{ float:left; padding-right:8px;}
+
+.commText{ margin:0px auto; text-align:center; padding:0px; width:400px;}
+.commText ul{ margin-top:40px; background:url(../../img/bankMedicalPass/hasd.png) 30px 80px no-repeat; padding:0px; height:300px;}
+.commText ul li{ font-size:24px; padding:10px 0px; color:#4f5050;}
+.commText ul li.btnTextCss{ text-align:right; padding-right:28px;}
+.qued{ width:139px; height:51px; cursor:pointer; border:none; padding:0px; margin:0px; background:url(../../img/bankMedicalPass/qr.png) left top no-repeat;}
+.qued:hover{background:url(../../img/bankMedicalPass/qron.png) left top no-repeat;}
+.chongzhi{ width:139px; height:51px; cursor:pointer; border:none; padding:0px; margin:0px; background:url(../../img/bankMedicalPass/chz.png) left top no-repeat;}
+.chongzhi:hover{background:url(../../img/bankMedicalPass/chzon.png) left top no-repeat;}
+
+.input{ border:1px solid #c9c9c9; height:30px; line-height:30px; padding:0px; margin:0px; font-size:16px; overflow:hidden; width:139px;}
+.input160{ border:1px solid #c9c9c9; height:30px; line-height:30px; padding:0px; margin:0px; font-size:16px; overflow:hidden; width:180px;}
+
+
+.commTextPassword{ width:980px; margin:8px auto; text-align:center;  background:url(../../img/bankMedicalPass/kuan1.png) center top no-repeat; height:413px;}
+.commTextPassword ul{ margin:0px auto; width:600px; padding:20px 0px 0px 0px; text-align:center;}
+.commTextPassword ul li{ text-align:center; font-size:18px; padding:6px 0px; color:#4f5050;}
+.commTextPassword ul li.TextCss{ font-size:14px; text-align:left; line-height:180%;}
+.commTextPassword ul li.colorOther{ color:#ba6820; font-weight:bold;}
+.commTextPassword ul li.btnTextCss{ text-align:right;}
+.commMomey{ width:980px; margin:8px auto; text-align:center; padding:0px; height:413px; }
+.commMomey h1{ padding:30px 0px 12px 100px; margin:0px; width:880px; float:left; text-align:left;}
+.commMomey h1 font{ font-size:20px; text-align:left; text-indent:28px; display:inline-block; background:url(../../img/bankMedicalPass/icon.png) left center no-repeat; color:#4f5050;}
+.commMomey ul{ padding:0px 200px; width:580px; float:left; background:url(../../img/bankMedicalPass/money.png) 720px bottom no-repeat;}
+.commMomey ul li{ float:left; width:50%; text-align:center; padding:25px 0px 0px 0px; color:#4f5050;}
+.m50{ width:204px; height:64px; cursor:pointer; background:url(../../img/bankMedicalPass/m50.gif) center top no-repeat; border:none; padding:0px; margin:0px;}
+.m50:hover{ background:url(../../img/bankMedicalPass/om50.gif) center top no-repeat;}
+.m100{ width:204px; height:64px; cursor:pointer; background:url(../../img/bankMedicalPass/m100.gif) center top no-repeat; border:none; padding:0px; margin:0px;}
+.m100:hover{ background:url(../../img/bankMedicalPass/om100.gif) center top no-repeat;}
+.m200{ width:204px; height:64px; cursor:pointer; background:url(../../img/bankMedicalPass/m200.gif) center top no-repeat; border:none; padding:0px; margin:0px;}
+.m200:hover{ background:url(../../img/bankMedicalPass/om200.gif) center top no-repeat;}
+.m300{ width:204px; height:64px; cursor:pointer; background:url(../../img/bankMedicalPass/m300.gif) center top no-repeat; border:none; padding:0px; margin:0px;}
+.m300:hover{ background:url(../../img/bankMedicalPass/om300.gif) center top no-repeat;}
+.m500{ width:204px; height:64px; cursor:pointer; background:url(../../img/bankMedicalPass/m500.gif) center top no-repeat; border:none; padding:0px; margin:0px;}
+.m500:hover{ background:url(../../img/bankMedicalPass/om500.gif) center top no-repeat;}
+.mO{ width:204px; height:64px; cursor:pointer; background:url(../../img/bankMedicalPass/mO.gif) center top no-repeat; border:none; padding:0px; margin:0px;}
+.mO:hover{ background:url(../../img/bankMedicalPass/omO.gif) center top no-repeat;}
+
+.commPass{ width:980px; margin:8px auto; text-align:center; padding:0px; height:auto; overflow:hidden; background:url(../../img/bankMedicalPass/jp.png) right bottom no-repeat;}
+.commPass ul{ padding:60px 0px 0px 280px; margin:0px; height:382px; float:left; }
+.commPass ul li{ padding:8px 0px;  font-size:18px; font-weight:normal; text-align:left;}
+.commPass ul li font{ font-size:16px; display:inline-block; padding:0px 4px; color:#F00;}
+
+.commPass h2{background:url(../../img/bankMedicalPass/line.jpg) right top repeat-y; padding:0px; margin:0px; height:412px; float:left; width:470px;}
+.commPass h2 font{background:url(../../img/bankMedicalPass/jp.png) left top no-repeat; float:left; display:inline-block; width:460px; padding:0px; margin:0px; height:412px;}
+.commPassC{ width:350px; margin:40px auto 8px 80px; text-align:center; padding:0px; float:left; height:auto; overflow:hidden;  }
+
+
+.tablenumber{ margin:0px 0px 15px 0px; padding:8px; border-collapse:collapse;}
+
+.borderwrtie{}
+.number1{width:65px; height:64px; cursor:pointer; background:url(../../img/bankMedicalPass/1.png) center top no-repeat; border:none; padding:0px; margin:0px;}
+.number1:hover{ background:url(../../img/bankMedicalPass/1on.png) center top no-repeat;}
+.number2{width:65px; height:64px; cursor:pointer; background:url(../../img/bankMedicalPass/2.png) center top no-repeat; border:none; padding:0px; margin:0px;}
+.number2:hover{ background:url(../../img/bankMedicalPass/2on.png) center top no-repeat;}
+.number3{width:65px; height:64px; cursor:pointer; background:url(../../img/bankMedicalPass/3.png) center top no-repeat; border:none; padding:0px; margin:0px;}
+.number3:hover{ background:url(../../img/bankMedicalPass/3on.png) center top no-repeat;}
+.number4{width:65px; height:64px; cursor:pointer; background:url(../../img/bankMedicalPass/4.png) center top no-repeat; border:none; padding:0px; margin:0px;}
+.number4:hover{ background:url(../../img/bankMedicalPass/4on.png) center top no-repeat;}
+.number5{width:65px; height:64px; cursor:pointer; background:url(../../img/bankMedicalPass/5.png) center top no-repeat; border:none; padding:0px; margin:0px;}
+.number5:hover{ background:url(../../img/bankMedicalPass/5on.png) center top no-repeat;}
+.number6{width:65px; height:64px; cursor:pointer; background:url(../../img/bankMedicalPass/6.png) center top no-repeat; border:none; padding:0px; margin:0px;}
+.number6:hover{ background:url(../../img/bankMedicalPass/6on.png) center top no-repeat;}
+.number7{width:65px; height:64px; cursor:pointer; background:url(../../img/bankMedicalPass/7.png) center top no-repeat; border:none; padding:0px; margin:0px;}
+.number7:hover{ background:url(../../img/bankMedicalPass/7on.png) center top no-repeat;}
+.number8{width:65px; height:64px; cursor:pointer; background:url(../../img/bankMedicalPass/8.png) center top no-repeat; border:none; padding:0px; margin:0px;}
+.number8:hover{ background:url(../../img/bankMedicalPass/8on.png) center top no-repeat;}
+.number9{width:65px; height:64px; cursor:pointer; background:url(../../img/bankMedicalPass/9.png) center top no-repeat; border:none; padding:0px; margin:0px;}
+.number9:hover{ background:url(../../img/bankMedicalPass/9on.png) center top no-repeat;}
+.number0{width:65px; height:64px; cursor:pointer; background:url(../../img/bankMedicalPass/0.png) center top no-repeat; border:none; padding:0px; margin:0px;}
+.number0:hover{ background:url(../../img/bankMedicalPass/0on.png) center top no-repeat;}
+
+.numTg{width:70px; height:134px; cursor:pointer; background:url(../../img/bankMedicalPass/tg.png) center top no-repeat; border:none; padding:0px; margin:0px;}
+.numTg:hover{ background:url(../../img/bankMedicalPass/tgOn.png) center top no-repeat;}
+
+
+
+.numqd{width:210px; height:64px; cursor:pointer; background:url(../../img/bankMedicalPass/qd.png) center top no-repeat; border:none; padding:0px; margin:0px;}
+.numqd:hover{ background:url(../../img/bankMedicalPass/qdOn.png) center top no-repeat;}
+
+.numqk{width:70px; height:64px; cursor:pointer; background:url(../../img/bankMedicalPass/psqk.png) center top no-repeat; border:none; padding:0px; margin:0px;}
+.numqk:hover{ background:url(../../img/bankMedicalPass/psqkon.png) center top no-repeat;}
+.commQD{ margin:0px auto; text-align:center; width:980px; padding:0px; background:url(../../img/bankMedicalPass/searchbg.png) right bottom no-repeat; height:410px;}
+.commQD ul{ background:url(../../img/bankMedicalPass/line.jpg) 400px bottom repeat-y; overflow:hidden; width:700px; margin:30px auto; text-align:center;}
+.commQD ul li{ font-size:20px; text-align:left; padding:8px 0px;}
+.leftFont{ float:left; width:300px; text-align:right; display:inline-block; padding:8px 0px; margin:0px;}
+.rightFont{ float:left; width:100px; text-align:left; display:inline-block; padding:8px 0px; margin:0px;}
+
+
+.BackHome{ width:980px; margin:0px auto; text-align:right;}
+.backBtn{width:198px; height:66px; cursor:pointer; background:url(../../img/bankMedicalPass/backHome.png) left top no-repeat; border:none; padding:0px; margin:0px;}
+.backBtn:hover{ background:url(../../img/bankMedicalPass/backHomeOn.png) center top no-repeat;}
+.backupBtn{width:198px; height:66px; cursor:pointer; background:url(../../img/bankMedicalPass/backup.png) left top no-repeat; border:none; padding:0px; margin:0px;}
+.backupBtn:hover{ background:url(../../img/bankMedicalPass/backupon.png) center top no-repeat;}
+
+.wcBtn{width:139px; height:51px; cursor:pointer; background:url(../../img/bankMedicalPass/qr.png) left top no-repeat; border:none; padding:0px; margin:0px;}
+.wcBtn:hover{ background:url(../../img/bankMedicalPass/qron.png) center top no-repeat;}
+
+.zzBtn{width:139px; height:51px; cursor:pointer; background:url(../../img/bankMedicalPass/zz.png) left top no-repeat; border:none; padding:0px; margin:0px;}
+.zzBtn:hover{ background:url(../../img/bankMedicalPass/zzon.png) center top no-repeat;}
+.p_select{width:139px; height:51px;  background:url(../../img/bankMedicalPass/zzon.png) left top no-repeat; border:none; padding:0px; margin:0px;}
+
+
+.wc2Btn{width:139px; height:51px; cursor:pointer; background:url(../../img/bankMedicalPass/wc2.png) left top no-repeat; border:none; padding:0px; margin:0px;}
+.wc2Btn:hover{ background:url(../../img/bankMedicalPass/wc2on.png) center top no-repeat;}
+
+.upBtn{width:139px; height:51px; cursor:pointer; background:url(../../img/bankMedicalPass/up.png) left top no-repeat; border:none; padding:0px; margin:0px;}
+.upBtn:hover{ background:url(../../img/bankMedicalPass/upon.png) center top no-repeat;}
+.downBtn{width:139px; height:51px; cursor:pointer; background:url(../../img/bankMedicalPass/down.png) left top no-repeat; border:none; padding:0px; margin:0px;}
+.downBtn:hover{ background:url(../../img/bankMedicalPass/downon.png) center top no-repeat;}
+
+
+.FootBar{ background:url(../../img/bankMedicalPass/bottom.jpg) left top no-repeat; height:59px; width:1024px; float:left; padding:0px; margin:0px;}
+
+
+.IndexbtnCss1{ width:100%; padding:0px; margin:0px; float:left;}
+.IndexbtnCss1 ul{ width:100%; padding:0px; margin:90px 0px 0px 0px; float:left;}
+.IndexbtnCss1 ul li{ padding:70px 0px 0px 0px; float:left;}
+
+.cashand4{ width:980px; margin:0px auto; text-align:center;}
+.cashand4 ul{ margin:0px auto; text-align:center; width:960px;}
+.cashand4 ul li{ padding:6px 5px; text-align:center;}
+
+.commBord1{ width:980px; margin:0px auto; text-align:center;}
+.commBord1 ul li{ padding:6px 0px; text-align:center;}
+
+/*--2015-5-11 add new --*/
+.CenterBar1{ width:100%; padding:0px; margin:0px auto; text-align:center; height:495px; float:left;}
+.LeftBarPrint{ background:url(../../img/bankMedicalPass/printLeft.jpg) left top no-repeat; height:578px; width:544px; float:left; padding:0px; margin:0px;}
+.RightBarPrint{ background:url(../../img/bankMedicalPass/printl.jpg) left top repeat-x; height:578px; width:480px; float:left; padding:0px; margin:0px;}
+.selfService{ width:369px; float:left; padding:0px; margin:50px 0px 0px 0px;}
+.selfService h1{  background:url(../../img/bankMedicalPass/printHead.png) left top no-repeat; height:57px; width:100%; float:left; padding:0px; margin:0px;}
+.SelfMunber{  background:url(../../img/bankMedicalPass/printBg.png) left top no-repeat; width:100%; height:371px; float:left; padding:15px 0px; margin:0px;}
+.selfInput{ background:url(../../img/bankMedicalPass/input.png) left top no-repeat; width:166px; height:36px; padding:0px; margin:0px; overflow:hidden; border:none; text-indent:6px; font-size:18px; color:#717171; font-weight:normal;}
+.selfBtn{ background:url(../../img/bankMedicalPass/dk.png) left top no-repeat; width:103px; height:35px; cursor:pointer; padding:0px; margin:0px; overflow:hidden; border:none;}
+.font20px{ font-size:18px;}

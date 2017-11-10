@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rows>
+	#foreach($scope in $scopes)
+	<row id="$scope.get("hosnum");$scope.get("deptcode");$scope.get("scopetype");$scope.get("targetcode")">
+		<cell type="ch"></cell>
+
+ 		<cell >$!scope.get("scopetype")</cell> 	
+ 		
+ 		<cell >$!scope.get("targetcode")</cell> 
+ 		
+ 		<cell >$!scope.get("comments")</cell> 
+	</row>
+	#end
+</rows>

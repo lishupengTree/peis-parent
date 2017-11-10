@@ -1,0 +1,68 @@
+* {
+	margin-left: 0;
+}
+
+#box {
+	width: 600px;
+	margin: 5px auto;
+}
+
+.headline {
+	font-size: 20px;
+	text-align: center;
+	line-height: 34px;
+	letter-spacing: 10px
+}
+
+.subheadline {
+	font-size: 14px;
+	text-align: center;
+	line-height: 24px
+}
+
+.subheadline span {
+	margin: 0 10px
+}
+
+.footline {
+	text-align: right
+}
+
+#box #report_tb {
+	border: 1px solid #000;
+	border-collapse: collapse;
+}
+
+#box #report_tb tr {
+	border: 1px solid #000;
+	border-collapse: collapse;
+}
+
+#box #report_tb tr td {
+	border: 1px solid #000;
+	border-collapse: collapse;
+}
+
+.txtCss {
+	text-align: left;
+}
+
+.txt2Css {
+	text-align: left;
+	text-indent: 14px
+}
+
+.numCss {
+	text-align: right;
+}
+
+.new_btn {
+	background: url("../img/ss.gif") no-repeat scroll left 1px transparent;
+	border: 0 none;
+	cursor: pointer;
+	font-size: 13px;
+	height: 27px;
+	margin: 0 4px;
+	text-align: center;
+	width: 64px;
+}

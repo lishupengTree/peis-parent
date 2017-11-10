@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rows>
+	#foreach($b in $bs)
+	<row id="$b.id">
+		<cell></cell>
+		<cell>$!b.id</cell>
+		<cell>$!b.pid</cell>
+		<cell>$!b.name</cell>
+		<cell>$!b.url</cell>
+		<cell>$!b.image</cell>
+		<cell>$!b.menu_type</cell>
+		<cell>$!b.open_type</cell>
+		<cell>$!number.format('#',$!b.index_no)</cell>
+		<cell>$!b.hotkeys</cell>
+		<cell>$!b.default_open</cell>
+	</row>
+	#end
+</rows>

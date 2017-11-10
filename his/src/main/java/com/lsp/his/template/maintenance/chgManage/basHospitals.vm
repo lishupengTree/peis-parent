@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rows>
+	#foreach($h in $hs)
+	<row id="$h.hosnum;$h.nodecode">
+		<cell type="ch"></cell>
+
+ 		<cell>$!h.hosnum</cell>
+ 		
+ 		<cell>$!h.hosname</cell> 
+ 		
+ 		<cell>$!h.nodetype</cell>
+ 		
+ 		<cell>$!h.tel</cell> 	
+ 		
+ 		<cell>$!h.address</cell>
+	</row>
+	#end
+</rows>

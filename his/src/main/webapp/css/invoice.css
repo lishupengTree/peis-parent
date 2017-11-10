@@ -1,0 +1,40 @@
+body{    font-family: Microsoft YaHei,Lucida Grande,Helvetica,Tahoma,Arial,sans-serif;}
+
+p {width:40px; font-size:13px; text-align: center;}
+
+
+.week_btn { 
+	width:64px; height:27px;
+	font-size:13px;
+	text-align:center; line-height:26px; 
+	background:url(../img/ss.gif) no-repeat left 1px; 
+	border: 0 none;
+	cursor:pointer;
+	float:right;
+	display:inline;
+	margin-left:5px;
+}
+
+.week_txt{
+	width:95px;
+    height:25px;
+    vertical-align:middle;
+    border:1px solid #93AFBA;
+    line-height:24px;}
+
+.hover{ font-size:15px; background:url(../img/xxhover1.gif) no-repeat;}
+
+.inv_grid {
+	width:100%; 
+	border-bottom:none; 
+	margin:0px;
+}
+#startTime,#endTime{
+	width:68px;
+	height:22px;
+	vertical-align:middle;
+    border: 1px solid #93AFBA;
+    line-height:17px;
+}
+
+.font3{ color:#44839a;font-size:12px;font-weight:bold; background:#fff; padding:0px 5px;}

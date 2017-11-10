@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<rows>
+	#set($num = 0)
+	#foreach($p in $Patientlist)
+	#set($num = $num +1)
+	<row id="$num" >
+		<cell >$num</cell>
+ 		<itemname>$!p.itemname</itemname>
+ 		<result>$!p.result</result>
+		<pexamid>$!p.pexamid</pexamid> 
+		<examid>$!p.examid</examid> 
+	</row>
+	#end
+</rows>

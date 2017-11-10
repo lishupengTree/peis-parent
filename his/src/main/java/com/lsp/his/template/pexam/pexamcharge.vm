@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rows>
+	#set($num = 0)
+	#foreach($chgDetails in $chgDetailses)
+	#set($num = $num +1)
+	<row id="$chgDetails.itemuuid">
+	#if($chgDetails.comclass=="检查")
+			<cell><![CDATA[<img height="20px" src="imgs/yao5.gif" alt="检查"/>]]></cell>
+			#elseif($chgDetails.comclass=="检验")
+			<cell><![CDATA[<img height="20px" src="imgs/yao4.gif" alt="检验"/>]]></cell>
+			#else
+			<cell><![CDATA[<img height="20px" src="imgs/yao7.gif" alt="其它"/>]]></cell>
+			#end
+	<cell></cell>
+	<cell>$!chgDetails.excdeptname</cell>
+	<cell>$num</cell>
+	<cell>$!chgDetails.groupname</cell>
+	<cell>$!chgDetails.itemname</cell>
+	<cell>$!chgDetails.price</cell>
+	<cell>1</cell>
+	<cell>次</cell>
+	<cell>$!chgDetails.price</cell>
+	<cell>$!chgDetails.discount</cell>
+	</row>
+	#end
+</rows>
