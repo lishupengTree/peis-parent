@@ -1324,7 +1324,7 @@ public class PhyexamAction {
         } finally {
             db.freeCon();
         }
-        String vmpagckage = "com/cpinfo/his/template/pexam";
+        String vmpagckage = "com/lsp/his/template/pexam";
         String vmname = "pexamItemsGroup.vm";
         String vm = VelocityUtils.generateGridVm(vmpagckage, vmname, "showList", itemsGroupList);
         pw.print(vm);

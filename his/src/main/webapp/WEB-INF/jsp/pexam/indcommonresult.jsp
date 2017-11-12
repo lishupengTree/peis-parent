@@ -12,13 +12,10 @@
     <meta http-equiv="pragma" content="no-cache"/>
     <meta http-equiv="cache-control" content="no-cache"/>
     <meta http-equiv="expires" content="0"/>
-    <title>体检套餐维护</title>
+    <title>体检小项 常见结果维护</title>
     <link href="css/register.css" rel="stylesheet" type="text/css"/>
     <link href="css/top.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" type="text/css" href="css/dictionary.css"/>
-    <link rel="stylesheet" type="text/css" href="dhtmlxCombo/codebase/dhtmlxcombo.css"/>
-    <link rel="stylesheet" type="text/css" href="dhtmlxGrid/codebase/dhtmlxgrid.css"/>
-    <link rel="stylesheet" type="text/css" href="css/dhtmlxgrid_dhx_custom.css"/>
     <link rel="stylesheet" href="zTreeStyle/zTreeStyle.css" type="text/css"/>
     <link rel="stylesheet" href="zTreeStyle/zTreeIcons.css" type="text/css"/>
     <style type="text/css">
@@ -50,24 +47,16 @@
             scrollbar-arrow-color: #9bb8de;
         }
     </style>
-    <script type="text/javascript" src="dhtmlxGrid/codebase/dhtmlxcommon.js"></script>
-    <script type="text/javascript" src="dhtmlxTabbar/codebase/dhtmlxtabbar.js"></script>
     <script type="text/javascript" src="js/util.js"></script>
-    <script type="text/javascript" src="js/dhtmlxgrid.js"></script>
-    <script type="text/javascript" src="js/dhtmlxgridcell.js"></script>
     <script type="text/javascript" src="js/jquery-1.6.1.js"></script>
     <script type="text/javascript" src="js/jquery.ztree-2.6.js"></script>
-    <script type="text/javascript" src="js/demoTools.js"></script>
-    <script type="text/javascript" src="js/dhtmlxgridcell.js"></script>
-    <script type="text/javascript" src="js/dhtmlxcombo.js"></script>
-    <script type="text/javascript" src="dhtmlxGrid/sources/ext/dhtmlxgrid_srnd.js"></script>
     <script type="text/javascript" src="js/demoTools.js"></script>
 </head>
 
 <script type="text/javascript">
+
     var zTree;
     var treeNodes;
-    var opentype = $("#opentype").val();
     //树的参数
     var setting = {
         isSimpleData: true,
@@ -75,21 +64,20 @@
         treeNodeParentKey: "pId",
         showLine: true,
         expandSpeed: "fast",//展开速度
-        //fontCss: setFontCss,
         callback: {
-            //click:zTreeOnClick //点击事件
+            click: zTreeOnClick //点击事件
         }
     };
-
+    //设置高度
     function setWin() {
         $("#iframe_body").css("height", parent.$("#dhxMainCont").height());
         $("#tree_div").css("height", parent.$("#dhxMainCont").height() - 8);
         $("#iframe_right").css("height", parent.$("#dhxMainCont").height() - 6);
         loadTree(true);
     }
-
+    //加载树
     function loadTree(autoLoad) {
-        var curNodeId = "";
+        var curNodeId = "";//当前节点id
         if (!autoLoad) {
             var curSelectNode = zTree.getSelectedNode();
             if (curSelectNode != null) {
@@ -99,22 +87,23 @@
         $.ajax({
             async: false,   //是否异步
             cache: false,   //是否使用缓存
-            type: 'post',   //请求方式,post
+            type: 'get',   //请求方式,post
             dataType: "json",   //数据传输格式
-            url: "phyexam/itemsGroupTree.htm",   //请求链接
+            url: "pexam/itemsIndTreecommonresults.htm",//请求链接
             error: function () {
                 alert('fail');
             },
             success: function (data) {
-                    treeNodes = data;
+                treeNodes = data;
             }
         });
-        zTree = $("#menuTree").zTree(setting, treeNodes);   //前台树的位置
+        zTree = $("#menuTree").zTree(setting, treeNodes);//前台树的位置
+
         if (autoLoad) {
-            var curNode = zTree.getNodeByParam("id", "0");
-            zTree.selectNode(curNode);
-            var url = "phyexam/itemsGroupList.htm?opentype=" + $('#opentype').val();
-            document.getElementById("iframe_right").src = url;
+            //var curNode = zTree.getNodeByParam("id","0");
+            //zTree.selectNode(curNode);
+            //var url = "maintenance/items/pexam/pexam_list.htm?hosnum=${hosnum}&parentid="+curNode.id;
+            //document.getElementById("iframe_right").src = url;
         } else {
             if (curNodeId != "") {
                 var curNode = zTree.getNodeByParam("id", curNodeId);
@@ -125,30 +114,21 @@
 
     //树点击方法
     function zTreeOnClick(event, treeId, treeNode) {
-        if (treeNode.myType) {
-            if (treeNode.myType == "group") {//显示套餐信息
-                var url = "phyexam/itemsGroupList.htm?opentype=" + $('#opentype').val();
-                document.getElementById("iframe_right").src = url;
-            } else if (treeNode.myType == "item_0") {//显示体检项目信息
-                var groupName = "";
-                var groupid = "";
-                groupName = treeNode.name;
-                groupid = treeNode.id;
-                var url = "maintenance/items/group/group_detail_list.htm?hosnum=${hosnum}&groupid=" + groupid + "&parentid=" + parentid
-                    + "&groupname=" + encodeURI(encodeURI(groupName)) + "&myType=" + treeNode.myType;
-                document.getElementById("iframe_right").src = url;
-            }
+        var ifind = treeNode.ifind;
+        var resulttype = treeNode.resulttype;
+        var url = "pexam/getindresult.htm";
+        if ('y' == ifind && '文字' == resulttype) { //点的是 小项的话并且小项的结果是数值类型的
+            url += "?indid=" + treeNode.id;
+        } else {
+            url = '';
+            //return ;
         }
+        document.getElementById("iframe_right").src = url;
     }
 </script>
 <body onload="setWin();">
 <table id="iframe_body" width="100%" cellpadding="0" border="0" cellpadding="0">
     <tr>
-        <td id="left_area" width="200" valign="top">
-            <div id="tree_div" style="OVERFLOW-y:auto;border:1px solid #93AFBA;width: 195px;">
-                <ul id="menuTree" class="tree"></ul>
-            </div>
-        </td>
         <td id="right_area" valign="top">
             <iframe id="iframe_right"
                     style="width: 100%; margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px;"
@@ -156,6 +136,5 @@
         </td>
     </tr>
 </table>
-<input type="hidden" id="opentype" value="${type}"/>
 </body>
 </html>
