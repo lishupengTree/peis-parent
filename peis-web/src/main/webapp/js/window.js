@@ -63,7 +63,6 @@ function doClose2() {
     window.location.href = window.location.href.slice(0, index) + "/his/exit.htm";
 }
 
-
 function openWin_wjz(title, width, height, url) {
     var top_ = ($(window).height() - height) / 2;
     var left_ = ($(window).width() - width) / 2;

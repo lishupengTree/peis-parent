@@ -1,5 +1,0 @@
-.sanjiao_1{ border-bottom:4px solid #cbdcef; font-family:"微软雅黑"; font-size:13px; height:35px; line-height:30px;}
-.sanjiao_1 ul{ list-style:none; margin:0px; padding:0px;}
-.sanjiao_1 ul li{ float:left; display:inline; width:90px; height:35px; color:#5b5a5a; cursor: pointer; display: none;}
-.sanjiao_1 ul li.sj_hover{ color:#000; background:url(../img/sanjiao.jpg) no-repeat 30px bottom;}
-
