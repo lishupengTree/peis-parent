@@ -1,0 +1,162 @@
+@charset "utf-8";
+/* CSS Document */
+#box{
+	margin-top:15px;
+	margin-bottom;25px;
+	width:255px;
+	font-size:14px;
+}
+.abc{
+  
+    font-size:12px;
+    height:40px;
+    
+}
+
+.abd{
+  
+    font-size:20px;
+    
+    border:0;
+    background:transparent;
+ 
+    line-height:20px;
+  
+  
+}
+
+.legend{
+	background-color:#D0E5FF;/*#BDC6E7*/
+	font-size:14px;
+}
+.legend_left{
+	width:300px;
+	text-align:left;
+	float:left;
+}
+.legend_right{
+	width:140px;
+	text-align:left;
+	float:right;
+}
+.standard_text_field{
+	border:1px solid #7F9DB9;
+	width:220px;
+}
+.short_text_field{
+	border:1px solid #7F9DB9;
+	width:55px;
+}
+.non_edit{
+	background-color:#EEE;
+}
+
+#btn_bar{
+	text-align:right;
+}
+input{
+	vertical-align:middle;
+}
+.v_pad{
+	padding:3px 0;
+}
+.no_underline{
+	text-decoration: none;
+	color: #000;
+}
+
+div.gridbox_light table.hdr td div.hdrcell{
+	padding-left:0px;
+	text-align: center;
+}
+div.gridbox_light table.obj tr.rowselected td.cellselected{
+	background-color:gray;
+}
+div.gridbox_dhx_skyblue table.hdr td div.hdrcell{
+	padding-left:0px;
+	text-align: center;
+}
+/* 拖拽Demo css */
+#left_box{
+	width:255px;
+	height:450px;
+	float:left;
+	//background:url(../images/site.png) top no-repeat;
+}
+ul#treeDemo {
+	width:180px;
+	margin-top:5px;
+	overflow-y:auto;
+	overflow-x:auto;
+}
+.patient{
+	text-indent:28px;
+}
+.in_patient{
+	color:#CCC;
+}
+.out_patient{
+	color:#000;
+}
+#right_box{
+	width:680px;
+	height:430px;
+	float:left;
+	border:2px solid #95B3D7;
+	padding:10px;
+	margin-top:2px;
+}
+.comm_bed{
+	border:2px solid #EEEEEE; /*#D8A8F1;#FADAA0*/
+	width:126px;
+	height:100px;
+	margin:10px;
+	float:left;
+	padding:4px 10px;
+}
+.empty_bed{
+	background-color:#FFF;
+}
+.in_bed_css1{
+	background-color:#FEF0EF;
+}
+.in_bed_css2{
+	background-color:#FEFBDA;
+}
+.in_bed_css3{
+	background-color:#EDFEEB;
+}
+.line_01{
+	font-size:12px;
+	font-weight:bold;
+	border-bottom:1px solid #CCCCCC;
+	padding-bottom:4px;
+}
+.line_02{
+	font-size:14px;
+	font-weight:bolder;
+	border-bottom:1px solid #CCCCCC;
+	padding:4px 0;
+	text-align:center;
+}
+.line_03{
+	font-size:12px;
+	border-bottom:1px solid #CCCCCC;
+	padding:3px 0;
+	text-align:center;
+}
+.line_04{
+	font-size:12px;
+	padding-top:3px;
+	text-align:center;
+	line-height:14px;
+}
+#transfer_bin{
+	border:2px hidden #EEEEEE;
+	width:126px;
+	height:100px;
+	margin:10px;
+	float:left;
+	padding:4px 10px;
+	background:url(../images/go_previous_page.png) center no-repeat;
+}

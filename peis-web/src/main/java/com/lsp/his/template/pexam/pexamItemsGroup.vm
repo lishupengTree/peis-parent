@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rows>
+	#foreach($show in $showList)
+	<row id="$show.get("groupid")">
+		<cell type="ch"></cell>
+		
+		<cell >$!show.get("groupname")</cell>
+		
+		<cell >$!show.get("cost")</cell>
+		
+ 		<cell >$!show.get("comments")</cell> 	
+	</row>
+	#end
+</rows>

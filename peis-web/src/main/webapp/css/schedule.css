@@ -1,0 +1,117 @@
+html{height:100%;}
+
+body{
+	height:100%;
+	margin:0px 7px 0px 7px;
+	}
+.schedule_div {
+	width:100%;height:100%;
+	font-family:Microsoft YaHei,Lucida Grande,Helvetica,Tahoma,Arial,sans-serif;
+}
+.schedule_div .div_top {width:100%;height:55px;margin-top:5px;}
+
+.top_left {float:left;position:relative;display:inline;}
+
+.top_content {
+	float:left;width:100%;
+	height:55px;
+	background:url(../img/ss2.gif) repeat-x;
+}
+.top_right{float:right;}
+.top_content p { width:40px; font-size:13px; text-align: center;
+				color:#44839a; font-weight:bold; background:#fff; padding:0px 5px;
+			}
+.top_content .week_btn { 
+		width:64px; height:27px;
+		font-size:13px;
+		text-align:center; 
+		line-height:26px; 
+		background:url(../img/ss.gif) no-repeat left 1px; 
+		border: 0 none;
+		cursor:pointer;
+		float:right;
+		display:inline;
+		margin-left:5px;
+		padding-bottom: 1px;
+}
+
+.week_txt{
+		width:100px; 
+		height:22px;
+		vertical-align:middle;
+		border:1px solid #93AFBA;
+		line-height:22px;
+	}
+
+.week_li{ 
+	width:100%; height:40px;
+	background:url(../img/ss4_1.gif) repeat-x left bottom; 
+	overflow:hidden;
+	margin-top: 3px;
+}
+.week_li_left {height:40px;}
+.week_li_c{width:100%;height:40px;position:relative;left:-1px}
+.week_li_right {height:40px;}
+
+.xx1{ 
+		list-style:none;
+		height:32px;
+		padding-left:0px;
+		margin:0px;
+		font-weight:bold;
+		font-size:13px;
+		display:inline;
+	}
+.xx1 li { 
+	cursor:pointer;
+	width:90px; 
+	height:32px; 
+	float:left; 
+	line-height:32px; 
+	text-align:center; 
+	margin-top:5px;
+	color:#6ba3b6; 
+}
+.chang_li{	
+		height:32px;
+		padding-top:5px;
+		font-weight:bold;
+		font-size:13px;
+		cursor:pointer;
+		width:40px; 
+		float:right; 
+		line-height:32px; 
+		text-align:center; 
+		color:#6ba3b6;
+	}
+	.chang_li p {margin:0px;}
+li p{margin:0px;}
+li span{font-size:10px; }
+
+	
+.li1{ background:url(../img/xx111.gif) no-repeat;}
+.li2{ background:url(../img/xx222.gif) no-repeat;}
+.li3{ background:url(../img/xx333.gif) no-repeat;}
+.weer_f{ color:#ff7e00;}
+.weer_f1{ color:#76c001;}
+
+
+.schedule_div .grid_div {
+	padding:5px 7px;
+	border:1px solid #98b3be;
+	border-bottom:none; 
+	border-top:none;
+}
+
+
+.bottom_line {
+	width:100%;
+	background:url(../img/bt2.jpg) repeat-x;
+}
+.font3{ color:#44839a; font-weight:bold; background:#fff; padding:0px 5px;}
+.float_left{ float:left; display:inline;}
+.float_right{ float:right; display:inline;}
+
+.hover{ font-size:15px; background:url(../img/xxhover1.gif) no-repeat;}
+
+

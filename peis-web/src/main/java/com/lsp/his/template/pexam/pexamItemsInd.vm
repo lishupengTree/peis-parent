@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rows>
+	#foreach($show in $showList)
+	<row id="$show.get("indid")">
+		<cell type="ch"></cell>
+		
+		<cell >$!show.get("indname")</cell>
+		
+		<cell >$!show.get("forsex")</cell>
+		
+		<cell >$!show.get("resulttype")</cell>
+		
+		<cell >$!show.get("resultunit")</cell>
+		
+		<cell >$!show.get("minval")</cell>
+		
+		<cell >$!show.get("maxval")</cell>
+	</row>
+	#end
+</rows>

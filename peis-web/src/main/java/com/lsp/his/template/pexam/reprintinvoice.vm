@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rows>
+	#foreach($chgDetails in $chgDetailses)
+	<row id="$chgDetails.invoiceid">
+		<cell></cell>
+		<cell>$!chgDetails.patname</cell>
+		<cell></cell>
+		#set($amt=$chgDetails.totalcost_a)
+		<cell>$!number.format('0.00',$amt)</cell>
+		<cell>$!chgDetails.invoiceno</cell>
+		<cell>$!chgDetails.chgdate</cell>
+		<cell>$!chgDetails.invoiceid</cell>
+	</row>
+	#end
+</rows>

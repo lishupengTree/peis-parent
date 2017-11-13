@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rows>
+	#foreach($bed in $beds)
+	<row id="$bed.get("hosnum");$bed.get("wardno");$bed.get("bedno")">
+		<cell type="ch"></cell>
+
+ 		<cell >$!bed.get("deptname")</cell> 	
+ 		
+ 		<cell >$!bed.get("roomno")</cell> 
+ 		
+ 		<cell >$!bed.get("bedno")</cell> 
+ 		
+ 		<cell >$!bed.get("contents")</cell> 
+ 		
+ 		<cell >$!bed.get("chgitem")</cell> 
+	</row>
+	#end
+</rows>

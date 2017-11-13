@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rows>
+	#foreach($user in $userList)
+	<row id="$user.get("id");$user.get("deptid")">
+		<cell type="ch"></cell>
+		
+ 		<cell >$!user.get("depttype")</cell> 	
+ 		
+ 		<cell >$!user.get("deptname")</cell> 
+ 		
+ 		<cell >$!user.get("user_key")</cell> 
+ 		
+ 		<cell >$!user.get("name")</cell> 
+ 		
+ 		<cell >$!user.get("sex")</cell>
+ 		
+ 		<cell >$!user.get("idcard")</cell>
+	</row>
+	#end
+</rows>
