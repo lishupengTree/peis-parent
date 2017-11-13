@@ -530,7 +530,6 @@
             <div id="pagination1"
                  style="position:relative;top:7px;left:5px;float:right;display:block;margin-top:-30px"></div>
 
-
             <c:choose>
                 <c:when test="${1==1}">
                     <ul class="ant" style="margin-top:5px;margin-left:200px;" id="func_ul">

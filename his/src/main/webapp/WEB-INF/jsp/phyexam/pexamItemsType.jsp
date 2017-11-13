@@ -273,7 +273,7 @@
             }
         }
         var medWay;
-        var pageSize = 16;
+        var pageSize = 20;
         function searchMedWayCount() {
             medWay = $("#medWay").val();
             $.ajax({

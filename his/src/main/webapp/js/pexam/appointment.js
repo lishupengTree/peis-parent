@@ -14,6 +14,7 @@ var loadByPexamid = "";//读卡后赋值的
 var loadByIdNum = "";//读卡后赋值的
 var myCalendar, myCalendar1;
 var pagesize;  //预约列表的页大小
+
 $(document).ready(function () {
     adjustDisp();
     var autoheight = ($(window).height() - 140);
@@ -442,10 +443,9 @@ function creatNew() {
                     var Pexam_main = jsons[0];
                     var unit = Pexam_main.examname;
                     var examtype = Pexam_main.examtype;
-                    openWin('新建体检人员', '760', '720', 'phyexam/personInfoEntry.htm?examid=' + clickexamid + '&unit=' + encodeURI(encodeURI(unit)) + "&examtype=" + encodeURI(encodeURI(examtype)) + "&str=" + str);
+                    openWin('新建体检人员', '760', '760', 'phyexam/personInfoEntry.htm?examid=' + clickexamid + '&unit=' + encodeURI(encodeURI(unit)) + "&examtype=" + encodeURI(encodeURI(examtype)) + "&str=" + str);
                 }
             }
-            //openWin('人员录入','770','238','pexam/newpatientpar.htm?examid='+clickexamid);
         });
     } else {
         alert('请先选择一个预约');
@@ -461,33 +461,7 @@ function setMainValue(examids) {
     clickexamid = examids;
     method = "loadAll";
     cleanYYunit();//清空预约信息
-    /*
-     $("#newpatient").click(function(){
-     $.ajax({
-     async:false,
-     cache:false,
-     type:'get',
-     url:"pexam/getmaininfo.htm?stamp="+stamp+"&examid="+examid,
-     error:function(){
-     alert('fail');
-     },
-     success:function(data){
-     if(data=='fail'){
-     alert("加载数据失败");
-     }else{
-     var jsons=eval('('+data+')');
-     var Pexam_main=jsons[0];
-     var unit=Pexam_main.examname;
-     var examtype=Pexam_main.examtype;
-     alert("111")
-     openWin('新建体检人员','800','620','phyexam/personInfoEntry.htm?examid='+clickexamid+'&unit='+encodeURI(encodeURI(unit))+"&examtype="+encodeURI(encodeURI(examtype)));
-     }
-     }
-     });
-     //openWin('人员录入','770','238','pexam/newpatientpar.htm?examid='+clickexamid);
 
-     });
-     */
     $("#importPersonnel").click(function () {
         openWin('导入人员', '450', '140', 'pexamNew/importPersonnel.htm?examid=' + clickexamid + "&method=new");
     });
@@ -1129,17 +1103,6 @@ function changeTwoDecimal_f(x) {
     return s_x;
 }
 
-function pullIn() {
-    if (examid == "" || examid == null || examid == 'undefined') {
-        alert('请先选择一个预约');
-        return;
-    }
-    openWin('新建体检人员', '864', '500', 'phyexam/nbperson_pullIn.htm?examid=' + examid);
-    /*
-     var url = "user/user_list_other.htm?hosnum=${hosnum}&nodecode=${nodecode}&deptcode=${deptcode}&type=${type}"+"&random="+Math.random();
-     parent.parent.window.openMyWin(window,"其他科室用户信息","804","804",url);
-     */
-}
 
 function cleanYYunit() {
     $('#examid').val("");

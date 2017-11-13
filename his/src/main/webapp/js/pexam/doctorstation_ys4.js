@@ -29,7 +29,7 @@ var app = {};
 var searchvalue = "";
 var comparSearch;
 var ind_diagno = [];
-var ind_numObj = {}; //全局变量  存放小项或者科室小结的最大序号。（点击小项框的时候初始化值。）
+
 var buweiStr; // 全局变量  存放部位
 var setting = {
     isSimpleData: true,
@@ -62,24 +62,7 @@ $(document).ready(function () {
         openWin('上报:', 632, 700, 'phyexamActionYH/report_tjysz.htm?time=' + new Date().getTime() + "&zjdoc=" + "N" + "&pexamid=" + pexamid);
     });
     toSelfWH();//页面自适应
-    /*
-     var winheight=$(window).height();
-     var topheight=$(".top").height();
-     $(".tj_ysz1").css("height",winheight-topheight);
-     $("#trc").css("height",winheight-topheight-110);
-     $("#grid_doctorstation").css("height", winheight-320);
-     $("#dtitems").css("height", winheight-440);
-     $("#grid_Results").css("height", winheight-240);
-     $("#calculator").css("height",winheight-245);
-     var winwidth=$(window).width();
-     $("#right_all").css("width",winwidth-195-30);
-     $("#dtitems").css("width", winwidth-660);
-     $("#ep2").css("width",winwidth-660-75-150);
-     var aa=$("#dtitems").width()/8.3;
-     $("#LogC"+$('#deptcode').val()).attr("cols",Math.round(aa));
-     //alert("科室小结宽度："+Math.round(aa));
-     $("#addcommonresulttd").css("width",$("#dtitems").width()-135-90-90);
-     */
+
     grid_doctorstation = new dhtmlXGridObject('grid_doctorstation');
     grid_doctorstation.setImagePath("dhtmlxGrid/codebase/imgs/");
     grid_doctorstation.setHeader("序号,姓名,状态,完成,pexamid,examid,体检时间");

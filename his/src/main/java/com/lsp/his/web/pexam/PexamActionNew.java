@@ -4263,7 +4263,7 @@ public class PexamActionNew {
             String sql = "";
             sql = "select * from pexam_ind_result a where a.hosnum=? and a.indid=?";
             List list = db.find(sql, new Object[]{hosnum, indid});
-            String vmpagckage = "com/cpinfo/his/template/pexam";
+            String vmpagckage = "com/lsp/his/template/pexam";
             String vmname = "pexamIndResult.vm";
             String vm = VelocityUtils.generateGridVm(vmpagckage, vmname, "showList", list);
             pw.print(vm);

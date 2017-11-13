@@ -144,7 +144,7 @@
 <body onload="setWin();">
 <table id="iframe_body" width="100%" cellpadding="0" border="0" cellpadding="0">
     <tr>
-        <td id="left_area" width="200" valign="top">
+        <td id="left_area" width="200" style="display: none" valign="top">
             <div id="tree_div" style="OVERFLOW-y:auto;border:1px solid #93AFBA;width: 195px;">
                 <ul id="menuTree" class="tree"></ul>
             </div>

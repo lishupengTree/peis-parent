@@ -66,10 +66,10 @@
         }
     });
     window.onresize = function () {
-        $("#gridbox").css("width", parent.$("#iframe_right").width() - 420);
+        $("#gridbox").css("width", parent.$("#iframe_right").width() - 30);
     }
     function setWin() {
-        $("#gridbox").css("width", parent.$("#iframe_right").width() - 420);
+        $("#gridbox").css("width", parent.$("#iframe_right").width() - 30);
         $("#gridbox").css("height", parent.$("#iframe_right").height() - 73);
         $("#grid").css("height", parent.$("#iframe_right").height() - 73);
 
@@ -230,7 +230,7 @@
                 mygrid.enableAutoWidth(true);
                 mygrid.setImagePath("imgs/");
                 mygrid.setSkin("dhx_custom");
-                mygrid.setInitWidths("35,*,80,80");
+                mygrid.setInitWidths("35,*,200,200");
                 mygrid.setHeader("选择,套餐名称,费用,备注");
                 mygrid.setColTypes("ch,ro,ro,ro");
                 mygrid.setColAlign("center,left,left,left");
@@ -238,35 +238,6 @@
                 mygrid.attachEvent("onRowDblClicked", doModifyRow);
                 mygrid.init();
                 mygrid.attachEvent("onXLE", setCounter);
-            </script>
-        </td>
-        <td style="padding-left:20px">
-            <div id="grid" style="background-color: white; height: 200px;"></div>
-            <script>
-                var grid = new dhtmlXGridObject('grid');
-                grid.enableAutoWidth(true);
-                grid.setImagePath("imgs/");
-                grid.setSkin("dhx_custom");
-                grid.setInitWidths("180,70,160");
-                grid.setHeader("<span style='color:red'>卫生局套餐</span>,费用,备注");
-                grid.setColTypes("ro,ro,ro");
-                grid.setColAlign("left,left,left");
-                grid.attachEvent("onRowDblClicked", openGroup);
-                grid.init();
-                $.ajax({
-                    cache: false,   //是否使用缓存
-                    url: "phyexam/getWSJGroup.htm",
-                    async: true,   //是否异步，false为同步
-                    type: "post",
-                    dataType: "json",
-                    error: function () {
-                    },
-                    success: function (reply) {
-                        for (var i = 0; i < reply.length; i++) {
-                            grid.addRow(reply[i].groupid, [reply[i].groupname, reply[i].cost, reply[i].comments]);
-                        }
-                    }
-                });
             </script>
         </td>
         <td background="img/new_yuan5.jpg">

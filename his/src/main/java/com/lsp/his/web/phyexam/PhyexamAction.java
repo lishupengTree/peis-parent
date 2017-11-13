@@ -915,7 +915,7 @@ public class PhyexamAction {
         } finally {
             db.freeCon();
         }
-        String vmpagckage = "com/cpinfo/his/template/pexam";
+        String vmpagckage = "com/lsp/his/template/pexam";
         String vmname = "pexamItemsCom.vm";
         String vm = VelocityUtils.generateGridVm(vmpagckage, vmname, "showList", itemsComList);
         pw.print(vm);
@@ -1897,13 +1897,6 @@ public class PhyexamAction {
 
         try {
             if (!str.equals("dblclick")) { //新增
-                    /*
-                    String codePath = "";//条码图片路径
-					//产生条码
-					BarCodeImage bar  = new BarCodeImage(1,33);
-					String path = bar.create39Image(pexamid);
-					codePath = "../"+path;
-					*/
                 //先判断在病人表里有木有已经建过档的人
                 patsql = "select * from bas_patient_ids a where a.idno='" + idnum + "' and a.idtype='" + idtype + "'";
                 list = db.find(patsql);
@@ -1991,7 +1984,6 @@ public class PhyexamAction {
 
             }
 
-            //System.out.println("sbbbbbbbbbbbbbbbbbbb");
             Map temp = null;
             String tempsql = "";
             List<Map> templist = new ArrayList<Map>();
@@ -2161,10 +2153,6 @@ public class PhyexamAction {
                                 ",parent_comid,xmstatus)values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,? ,?,?,?,?,?,?,?,?,? ,?,'未检')", params_1);
                     }
                 }
-            } else {
-                //尚未开始体检的
-
-
             }
 
             String sql = "delete from  pexam_items a where a.examid=? and a.pexamid=? and a.hosnum=?";//先删掉个人的全部套餐
@@ -2183,7 +2171,6 @@ public class PhyexamAction {
             }                                                //然后在添加选中的套餐
             sql = "insert into pexam_items(itemname,cost,itemid,isgroup,hosnum,examid,pexamid)values(?,?,?,?,?,?,?)";
             db.excuteBatch(sql, params);
-
 
             db.commit();
         } catch (Exception e) {

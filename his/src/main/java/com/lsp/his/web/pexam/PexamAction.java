@@ -112,7 +112,7 @@ public class PexamAction {
             // List<Pexam_main> listmain = db.find(sqlmain,new
             // Object[]{hosnum,nodecode}, Pexam_main.class);
             // 套餐信息
-            String sql = " select a.groupid,a.groupname,a.cost from pexam_items_group a where a.hosnum=? and a.nodecode=?";
+            String sql = " select a.groupid,a.groupname,a.cost from pexam_items_group a where a.hosnum=? and a.nodecode=? and a.delflag='n'";
             List<Pexam_items_group> listgroup = db.find(sql, new Object[]{
                     hosnum, nodecode}, Pexam_items_group.class);
             // 单项目信息
@@ -558,7 +558,7 @@ public class PexamAction {
             // "select a.itemcode, a.itemname,a.excdept,a.excdeptname,a.groupid,a.comclass,to_char(a.excdate,'yyyy-mm-dd hh24:mi:ss') excdate ,a.excdoctorname, i.indid,i.indname ,r.result,r.resultunit,r.range ,a.deptsum, i.tsxm  from pexam_items_title a left join pexam_items_comdet c on c.comid=a.itemcode left join pexam_items_com pi on pi.comid = a.itemcode left join pexam_items_type t on pi.parentid = t.typeid left join pexam_items_ind i on i.indid=c.indid left join pexam_results r on r.indid=i.indid and r.pexamid=a.pexamid where a.pexamid=? and a.comclass!='检验' and a.comclass!='检查' and a.comclass!='外送' and a.tjxm='Y' and i.indid is not null  order by  to_number(t.sn) ,to_number(i.sn)   ";
             list = db.find(sql, new Object[]{pexamid});
             deptsumBr(list); // 处理list里的deptsum 字段
-            String vmpagckage = "com/cpinfo/his/template/maintenance/";
+            String vmpagckage = "com/lsp/his/template/maintenance/";
             String vm = "";
             String vmname = "zjbg_gkjc.vm";
             // 特殊处理（吴宝珠 耳鼻咽喉科 不显示 喉部和鼻咽部 小项。）
@@ -708,7 +708,7 @@ public class PexamAction {
             Map map = new HashMap();
             sql = "select a.itemcode, a.itemname, a.excdept, a.excdeptname, a.groupid, a.comclass, to_char(a.excdate, 'yyyy-mm-dd hh24:mi:ss') excdate, a.excdoctorname, r.indid, r.indname, r.result, r.resultunit, r.range, a.deptsum from pexam_items_title a left join pexam_results r on r.itemuuid = a.itemuuid where a.pexamid = ? and a.tjxm='Y' and (a.comclass = '检验' or a.comclass='外送') order by a.itemcode ";
             list = db.find(sql, new Object[]{pexamid});
-            String vmpagckage = "com/cpinfo/his/template/maintenance/";
+            String vmpagckage = "com/lsp/his/template/maintenance/";
             String vm = "";
             String vmname = "zjbg_gkjc.vm";
             vm = VelocityUtils.generateVm(vmpagckage, vmname, "list", list);
@@ -743,7 +743,7 @@ public class PexamAction {
             Map map = new HashMap();
             sql = "select a.itemcode, a.itemname,a.excdept,a.excdeptname,a.groupid,a.comclass,to_char(a.excdate,'yyyy-mm-dd hh24:mi:ss') excdate ,a.excdoctorname, i.indid,i.indname ,r.result,r.resultunit,r.range ,a.deptsum, i.tsxm  from pexam_items_title a left join pexam_items_comdet c on c.comid=a.itemcode left join pexam_items_com pi on pi.comid = a.itemcode left join pexam_items_type t on pi.parentid = t.typeid left join pexam_items_ind i on i.indid=c.indid left join pexam_results r on r.indid=i.indid and r.pexamid=a.pexamid where a.pexamid=? and a.comclass = '检查'  and a.tjxm='Y' and i.indid is not null  order by  to_number(t.sn) ,to_number(i.sn)   ";
             list = db.find(sql, new Object[]{pexamid});
-            String vmpagckage = "com/cpinfo/his/template/maintenance/";
+            String vmpagckage = "com/lsp/his/template/maintenance/";
             String vm = "";
             String vmname = "zjbg_gkjc.vm";
             vm = VelocityUtils.generateVm(vmpagckage, vmname, "list", list);
@@ -1114,7 +1114,7 @@ public class PexamAction {
             // map.put("age", 11);
             // }
 
-            String vmpagckage = "com/cpinfo/his/template/pexam/";
+            String vmpagckage = "com/lsp/his/template/pexam/";
             String vmname = "grid_patient_appoint.vm";
             String vm = VelocityUtils.generateGridVm(vmpagckage, vmname,
                     "Patientlist", list);
@@ -2197,7 +2197,7 @@ public class PexamAction {
             response.setContentType("text/xml;charset=utf-8");
             PrintWriter pw = null;
             pw = response.getWriter();
-            String vmpagckage = "com/cpinfo/his/template/pexam/";
+            String vmpagckage = "com/lsp/his/template/pexam/";
             String vmname = "grid_patient_reception.vm";
             String vm = VelocityUtils.generateGridVm(vmpagckage, vmname,
                     "Patientlist", list);
@@ -2228,7 +2228,7 @@ public class PexamAction {
                     Pexam_mans.class);
             PrintWriter pw = null;
             pw = response.getWriter();
-            String vmpagckage = "com/cpinfo/his/template/pexam/";
+            String vmpagckage = "com/lsp/his/template/pexam/";
             String vmname = "grid_doctorstation.vm";
             String vm = VelocityUtils.generateGridVm(vmpagckage, vmname,
                     "Patientlist", list);
